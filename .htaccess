@@ -1,0 +1,22 @@
+RewriteEngine on
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^admin/?$ admin/index.php
+RewriteRule ^admin/home/?$ admin/home.php
+RewriteRule ^admin/oph_summary/?$ admin/oph_mgrup.php
+RewriteRule ^admin/chart_oph/?$ admin/chart_oph.php
+RewriteRule ^admin/chart_pph/?$ admin/chart_pph.php
+RewriteRule ^admin/pph/?$ admin/pph.php
+RewriteRule ^admin/oph/?$ admin/oph.php
+RewriteRule ^admin/wip/?$ admin/wip.php
+RewriteRule ^admin/report/?$ admin/report.php
+RewriteRule ^admin/fg/?$ admin/fg.php
+RewriteRule ^admin/onhand/?$ admin/onhand.php
+
+<Files regist.php>
+        Order deny,allow
+        Deny from all
+        Allow from ::1
+</Files>
